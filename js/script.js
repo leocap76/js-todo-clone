@@ -21,9 +21,16 @@ $(document).ready(function() {
   var source = $("#entry-template").html();
   var template = Handlebars.compile(source);
 
-  for( var = 0; i < list.length; i++){
+  for( var i = 0; i < list.length; i++){
     var html = template(list[i]);
     $(".todo-list").append(html);
   }
 
+
+
+//_________________________________
+//funzione elimina elemento dalla lista cliccando sulla "x"
+$(".done").click(function(){
+  $(this).parent().remove();
+})
 });

@@ -18,7 +18,9 @@ $(document).ready(function() {
   },
   ];
 
+  // var source = document.getElementById("entry-template").innerHTML;
   var source = $("#entry-template").html();
+  //var template = Handlebars.compile(<li> {{text}} <span class="done">X</span></li>);
   var template = Handlebars.compile(source);
 
   for( var i = 0; i < list.length; i++){
